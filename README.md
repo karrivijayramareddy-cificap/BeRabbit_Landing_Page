@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BeRabbit Landing Page
+
+This is a modern, responsive, and highly-performant landing page for BeRabbit, built following the "Spatial SaaS" aesthetic.
+
+## Tech Stack
+- **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Components:** [shadcn/ui](https://ui.shadcn.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+
+## Features
+- **Glassmorphism Design:** Frosty glass containers with subtle glows and deep shadows.
+- **Fluid Layout:** Automatically scales across desktop, tablet, and mobile views.
+- **Micro-Animations:** Snappy and satisfying hover effects and scroll reveals.
+- **Accessible & SEO Optimized:** Proper semantic HTML structure and built-in metadata.
+- **Dual Typography:** Uses 'Plus Jakarta Sans' for striking headlines and 'Inter' for highly readable body copy.
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+```bash
+npm install
+```
 
+Run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Vercel Deployment (Recommended)
+This project is configured to deploy seamlessly to Vercel. 
 
-## Learn More
+1. Install the Vercel CLI (if not already installed):
+```bash
+npm i -g vercel
+```
+2. Link your project and deploy:
+```bash
+vercel
+```
+3. For a production deployment, use:
+```bash
+vercel --prod
+```
 
-To learn more about Next.js, take a look at the following resources:
+### GitHub Deployment
+To push the completed project to your GitHub repository:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create a new repository named `BeRabbit_Landing_Page` on GitHub.
+2. Initialize git and push:
+```bash
+git init
+git add .
+git commit -m "feat: initial release of BeRabbit Landing Page"
+git branch -M main
+git remote add origin https://github.com/YOUR_COMPANY_OR_USERNAME/BeRabbit_Landing_Page.git
+git push -u origin main
+```
+*(Ensure you replace the remote URL with your actual repository URL).*
