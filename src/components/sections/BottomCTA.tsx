@@ -5,25 +5,37 @@ import Link from "next/link";
 
 export function BottomCTA() {
   return (
-    <section className="py-24 px-4">
+    <section className="section-xl px-4">
       <div className="fluid-container">
-        <div className="bg-primary rounded-3xl p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
-          {/* Decorative Elements */}
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-black/10 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2" />
+        <div
+          className="relative rounded-3xl overflow-hidden px-8 py-20 md:px-20 text-center"
+          style={{ background: "linear-gradient(135deg, #F97316 0%, #FB923C 100%)" }}
+        >
+          {/* Decorative glows */}
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-white/10 blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-black/10 blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
+          {/* Glass card wrapper for content */}
           <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="text-headline-lg md:text-[40px] font-heading font-bold text-white mb-6 leading-tight">
+            <h2 className="text-display-lg font-heading text-white mb-5">
               Ready to Launch Your Career?
             </h2>
-            <p className="text-lg md:text-xl text-white/90 mb-10">
+            <p className="text-body-lg text-white/85 mb-10">
               Join thousands of students who are already using BeRabbit to transform their future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-primary hover:bg-slate-50 font-bold text-base h-14 px-8 rounded-xl shadow-lg hover:scale-[1.02] transition-transform">
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-primary font-bold text-base h-13 px-9 rounded-lg shadow-[0_8px_24px_rgba(0,0,0,0.15)] hover:bg-white/95 hover:scale-[1.02] transition-all duration-200"
+              >
                 <Link href="#features">Enroll Now for ₹1499</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 font-bold text-base h-14 px-8 rounded-xl backdrop-blur-sm hover:scale-[1.02] transition-transform bg-transparent">
+              <Button
+                asChild
+                size="lg"
+                className="bg-white/15 backdrop-blur-sm border border-white/30 text-white font-bold text-base h-13 px-9 rounded-lg hover:bg-white/25 hover:scale-[1.02] transition-all duration-200"
+              >
                 <Link href="mailto:hello@berabbit.com">Talk to an Expert</Link>
               </Button>
             </div>

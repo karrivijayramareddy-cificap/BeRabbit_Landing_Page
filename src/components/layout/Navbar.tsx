@@ -9,8 +9,8 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-[#FFF8F5] border-b border-orange-100/60">
-      <div className="fluid-container flex h-[58px] items-center justify-between">
+    <nav className="sticky top-0 z-50 w-full glass">
+      <div className="fluid-container flex h-[60px] items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
@@ -19,23 +19,29 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex gap-10 items-center text-[0.9rem] font-medium text-gray-600">
-          <Link href="#features" className="hover:text-primary transition-colors">Product</Link>
-          <Link href="#roadmap" className="hover:text-primary transition-colors">Courses</Link>
-          <Link href="#enterprise" className="hover:text-primary transition-colors">For Colleges</Link>
+        <div className="hidden md:flex gap-10 items-center">
+          {["Product|#features", "Courses|#roadmap", "For Colleges|#enterprise"].map((item) => {
+            const [label, href] = item.split("|");
+            return (
+              <Link
+                key={href}
+                href={href}
+                className="text-label-md text-foreground/70 hover:text-primary transition-colors duration-200"
+              >
+                {label}
+              </Link>
+            );
+          })}
         </div>
 
-        {/* Desktop Right */}
+        {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-5">
-          <Link
-            href="/login"
-            className="text-[0.9rem] font-bold text-primary hover:opacity-75 transition-opacity"
-          >
+          <Link href="/login" className="text-label-md font-bold text-primary hover:opacity-75 transition-opacity">
             Login
           </Link>
           <Button
             asChild
-            className="rounded-full font-bold px-6 h-10 bg-primary hover:bg-primary/90 text-white text-[0.9rem] shadow-none border-0"
+            className="rounded-full font-bold px-6 h-10 bg-primary hover:bg-primary/90 text-white text-sm shadow-none border-0 hover:scale-[1.02] hover:shadow-[0_8px_24px_rgba(249,115,22,0.35)] transition-all duration-200"
           >
             <Link href="#features">Get Started</Link>
           </Button>
@@ -45,7 +51,7 @@ export function Navbar() {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-gray-600 focus:outline-none p-1"
+            className="text-foreground/70 focus:outline-none p-1"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -54,13 +60,13 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#FFF8F5] absolute top-full w-full border-b border-orange-100 shadow-md">
+        <div className="md:hidden absolute top-full w-full bg-white/95 backdrop-blur-[12px] border-b border-orange-100 shadow-xl">
           <div className="px-6 pt-3 pb-6 flex flex-col gap-3">
-            <Link href="#features" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-base font-medium text-gray-700 hover:text-primary">Product</Link>
-            <Link href="#roadmap" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-base font-medium text-gray-700 hover:text-primary">Courses</Link>
-            <Link href="#enterprise" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-base font-medium text-gray-700 hover:text-primary">For Colleges</Link>
-            <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-base font-bold text-primary">Login</Link>
-            <Button asChild className="w-full rounded-full font-bold bg-primary text-white">
+            <Link href="#features" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-body-md font-medium text-foreground/80 hover:text-primary">Product</Link>
+            <Link href="#roadmap" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-body-md font-medium text-foreground/80 hover:text-primary">Courses</Link>
+            <Link href="#enterprise" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-body-md font-medium text-foreground/80 hover:text-primary">For Colleges</Link>
+            <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-body-md font-bold text-primary">Login</Link>
+            <Button asChild className="w-full rounded-full font-bold bg-primary text-white hover:bg-primary/90">
               <Link href="#features" onClick={() => setIsMobileMenuOpen(false)}>Get Started</Link>
             </Button>
           </div>
