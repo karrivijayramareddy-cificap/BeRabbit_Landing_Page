@@ -27,7 +27,7 @@ const timelineSteps = [
 
 export function Timeline() {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background" id="roadmap">
       <div className="fluid-container">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-headline-lg font-heading text-foreground mb-4">

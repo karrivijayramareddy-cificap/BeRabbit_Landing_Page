@@ -44,7 +44,7 @@ const features = [
 
 export function Features() {
   return (
-    <section className="py-24 bg-background" id="product">
+    <section className="py-24 bg-background" id="features">
       <div className="fluid-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-headline-lg font-heading text-foreground mb-4">

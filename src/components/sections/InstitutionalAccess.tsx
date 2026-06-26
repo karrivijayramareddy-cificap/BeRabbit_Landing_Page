@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { LayoutDashboard, Users, GraduationCap, Building, FileText, ShieldCheck } from "lucide-react";
 
 const collegeFeatures = [
@@ -39,7 +40,7 @@ const collegeFeatures = [
 
 export function InstitutionalAccess() {
   return (
-    <section className="py-24 bg-slate-900 text-white rounded-[2rem] mx-4 md:mx-8 my-12 relative overflow-hidden" id="colleges">
+    <section className="py-24 bg-slate-900 text-white rounded-[2rem] mx-4 md:mx-8 my-12 relative overflow-hidden" id="enterprise">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-500/10 rounded-full blur-3xl -z-10" />
@@ -54,8 +55,8 @@ export function InstitutionalAccess() {
               Experience the best B2B platform customized for your institution. Track, manage, and boost student career success.
             </p>
           </div>
-          <Button variant="outline" className="bg-white text-slate-900 hover:bg-slate-100 border-none font-semibold px-6 hover:scale-[1.02] transition-transform">
-            Request Institutional Access
+          <Button asChild variant="outline" className="bg-white text-slate-900 hover:bg-slate-100 border-none font-semibold px-6 hover:scale-[1.02] transition-transform">
+            <Link href="mailto:colleges@berabbit.com">Request Institutional Access</Link>
           </Button>
         </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function BottomCTA() {
   return (
@@ -19,11 +20,11 @@ export function BottomCTA() {
               Join thousands of students who are already using BeRabbit to transform their future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-slate-50 font-bold text-base h-14 px-8 rounded-xl shadow-lg hover:scale-[1.02] transition-transform">
-                Enroll Now for ₹1499
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-slate-50 font-bold text-base h-14 px-8 rounded-xl shadow-lg hover:scale-[1.02] transition-transform">
+                <Link href="#features">Enroll Now for ₹1499</Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 font-bold text-base h-14 px-8 rounded-xl backdrop-blur-sm hover:scale-[1.02] transition-transform bg-transparent">
-                Talk to an Expert
+              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 font-bold text-base h-14 px-8 rounded-xl backdrop-blur-sm hover:scale-[1.02] transition-transform bg-transparent">
+                <Link href="mailto:hello@berabbit.com">Talk to an Expert</Link>
               </Button>
             </div>
           </div>

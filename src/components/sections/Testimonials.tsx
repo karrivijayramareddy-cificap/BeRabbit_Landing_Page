@@ -5,24 +5,24 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Neha Sharma",
+    name: "Rahul Verma",
     role: "SDE at TechCorp",
     content: "The structured approach of BeRabbit changed everything for me. The 1:1 mock interviews were particularly helpful for my technical rounds.",
-    initials: "NS",
+    initials: "RV",
     color: "bg-blue-100 text-blue-700"
   },
   {
-    name: "Rohan Das",
+    name: "Priya Singh",
     role: "Analyst at DataSys",
     content: "Coming from a tier-3 college, I lacked exposure. BeRabbit gave me the skills and the confidence to compete with the best.",
-    initials: "RD",
+    initials: "PS",
     color: "bg-orange-100 text-orange-700"
   },
   {
-    name: "Dr. K. Natarajan",
+    name: "Dr. Srinivasan",
     role: "TPO, REC Institute",
     content: "Our college placement metrics run seamlessly! Over 100+ students upgraded in real-time. Our placement percentage increased by 20%.",
-    initials: "KN",
+    initials: "DS",
     color: "bg-green-100 text-green-700"
   }
 ];
@@ -56,7 +56,7 @@ export function Testimonials() {
                 ))}
               </div>
               <p className="text-body-md text-foreground/80 mb-8 flex-1 italic">
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
               <div className="flex items-center gap-4 mt-auto">
                 <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold font-heading ${testimonial.color}`}>

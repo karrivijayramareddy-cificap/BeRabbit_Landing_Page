@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "50k+", label: "Students Enrolled" },
-  { value: "80+", label: "College Partners" },
-  { value: "90%", label: "Placement Rate" },
-  { value: "15+ LPA", label: "Avg. Package" },
+  { value: "5000+", label: "Students Enrolled" },
+  { value: "50+", label: "Partner Colleges" },
+  { value: "95%", label: "Placement Rate" },
+  { value: "24/7", label: "Mentor Support" },
 ];
 
 export function Stats() {
