@@ -63,7 +63,7 @@ export function InstitutionalAccess() {
             asChild
             className="shrink-0 bg-primary hover:bg-primary/90 text-white font-bold px-6 rounded-lg hover:scale-[1.02] hover:shadow-[0_8px_24px_rgba(249,115,22,0.4)] transition-all duration-200"
           >
-            <Link href="mailto:colleges@berabbit.com">Request Institutional Access</Link>
+            <Link href="mailto:chodagiriprasad5@gmail.com">Request Institutional Access</Link>
           </Button>
         </div>
 
