@@ -36,7 +36,7 @@ export function BottomCTA() {
                 size="lg"
                 className="bg-white/15 backdrop-blur-sm border border-white/30 text-white font-bold text-base h-13 px-9 rounded-lg hover:bg-white/25 hover:scale-[1.02] transition-all duration-200"
               >
-                <Link href="mailto:hello@berabbit.com">Talk to an Expert</Link>
+                <Link href="mailto:chodagiriprasad5@gmail.com">Talk to an Expert</Link>
               </Button>
             </div>
           </div>
