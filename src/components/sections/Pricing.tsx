@@ -85,7 +85,7 @@ export function Pricing() {
                   size="lg"
                   className="w-full text-base h-13 rounded-lg btn-primary"
                 >
-                  <Link href="mailto:hello@berabbit.com">Claim This Offer</Link>
+                  <Link href="mailto:chodagiriprasad5@gmail.com">Claim This Offer</Link>
                 </Button>
 
                 <p className="text-caption text-foreground/40 mt-4">
